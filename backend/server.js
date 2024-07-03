@@ -13,13 +13,11 @@ mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/Node-
 
 
 
-
 app.use(cors({
-    origin: "https://aprajita-hh7k435k9-aprajita0s-projects.vercel.app",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
+  origin: 'https://aprajita-hh7k435k9-aprajita0s-projects.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true  // Enable credentials if necessary
 }));
-
 
 app.use(express.json())
 
