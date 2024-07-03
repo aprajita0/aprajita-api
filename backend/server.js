@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const Music = require('./models/musicModel')
+const Music = require('./musicModel')
 const app = express()
 const cors = require('cors')
 
