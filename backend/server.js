@@ -5,13 +5,13 @@ const app = express()
 const cors = require('cors')
 
 
-mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/Node-API?retryWrites=true&w=majority&appName=AprajitaAPI')
+mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/?retryWrites=true&w=majority&appName=AprajitaAPI')
 
 
 
 app.use(cors(
     {
-        origin: ["https://deploy-mern-aprajita-api.vercel.app"],
+        origin: ["https://mern-aprajitas-5kokuq3cw-aprajita0s-projects.vercel.app/"],
         methods: ["POST","GET"],
         credentials: true
     }
