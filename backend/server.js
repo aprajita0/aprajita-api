@@ -5,13 +5,8 @@ const app = express()
 const cors = require('cors')
 
 
-mongoose.
-connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/Node-API?retryWrites=true&w=majority&appName=AprajitaAPI')
-.then(() => {
-    console.log('Connected to MongoDB')
-}).catch((error) => {
-    console.log(error)
-})
+mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/Node-API?retryWrites=true&w=majority&appName=AprajitaAPI')
+
 
 
 app.use(cors(
@@ -30,7 +25,7 @@ app.use(express.urlencoded({exteded: false}))
 app.get('/', (req, res) => {
     res.send('Hello Node API')
 })
-
+/*
 app.get('/music', async(req, res) => {
     try {
         const music = await Music.find({});
@@ -101,3 +96,4 @@ app.delete('/music/:id', async(req, res) => {
         res.status(500).json({message: error.message})
     }
 })
+*/
