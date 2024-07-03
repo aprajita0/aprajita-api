@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-/*const Music = require('./models/musicModel')*/
+const Music = require('./models/musicModel')
 const app = express()
 const cors = require('cors')
 
@@ -18,14 +18,13 @@ app.use(cors(
 ))
 
 app.use(express.json())
-app.use(express.urlencoded({exteded: false}))
 
 
 //routes
 app.get('/', (req, res) => {
     res.send('Hello Node API')
 })
-/*
+
 app.get('/music', async(req, res) => {
     try {
         const music = await Music.find({});
@@ -96,4 +95,5 @@ app.delete('/music/:id', async(req, res) => {
         res.status(500).json({message: error.message})
     }
 })
-*/
+]
+
