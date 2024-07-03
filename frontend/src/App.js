@@ -75,7 +75,7 @@ function App() {
       <header className="App-header">
         <h1>Welcome to Music API</h1>
         <p>
-          You can test the CRUD Features below, you can update, delete and add a song into the database. The song list contains all the data from the music database created in MongoDB. 
+          You can test the CRUD Features below, you can update, delete and add a song into the database. The song list contains all the data from the music database created in MongoDB. To test this on postman go to use the link https://mern-aprajitas-api.vercel.app/, to test the get, update and delete functions add /music to the url.
         </p>
         
         <h2>{editing ? 'Edit Song' : 'Add a New Song'}</h2>
