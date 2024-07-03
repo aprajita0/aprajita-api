@@ -14,7 +14,7 @@ function App() {
 
   const fetchSongs = async () => {
     try {
-      const response = await axios.get('https://aprajita-api.vercel.app/music');
+      const response = await axios.get('https://mern-aprajitas-api.vercel.app/music');
       setSongs(response.data);
     } catch (error) {
       console.error('Error fetching the songs', error);
@@ -41,7 +41,7 @@ function App() {
 
   const addSong = async (newSong) => {
     try {
-      await axios.post('https://aprajita-api.vercel.app/music', newSong);
+      await axios.post('https://mern-aprajitas-api.vercel.app/music', newSong);
     } catch (error) {
       console.error('Error adding the song', error);
     }
@@ -49,7 +49,7 @@ function App() {
 
   const updateSong = async (id, updatedSong) => {
     try {
-      await axios.put(`https://aprajita-api.vercel.app/music/${id}`, updatedSong);
+      await axios.put(`https://mern-aprajitas-api.vercel.app/music/${id}`, updatedSong);
     } catch (error) {
       console.error('Error updating the song', error);
     }
@@ -57,7 +57,7 @@ function App() {
 
   const deleteSong = async (id) => {
     try {
-      await axios.delete(`https://aprajita-api.vercel.app/music/${id}`);
+      await axios.delete(`https://mern-aprajitas-api.vercel.app/music/${id}`);
       fetchSongs();
     } catch (error) {
       console.error('Error deleting the song', error);
