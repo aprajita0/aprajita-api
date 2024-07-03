@@ -5,7 +5,12 @@ const app = express()
 const cors = require('cors')
 
 
-mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/?retryWrites=true&w=majority&appName=AprajitaAPI');
+mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/?retryWrites=true&w=majority&appName=AprajitaAPI').then(() => {
+    console.log('Connected to MongoDB')
+}).catch((error) => {
+    console.log(error)
+})
+
 
 
 
