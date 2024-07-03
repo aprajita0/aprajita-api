@@ -30,16 +30,18 @@ app.get('/', (req, res) => {
     res.send('Hello Node API')
 })
 
-app.get('/music', async(req, res) => {
+app.get('/music', async (req, res) => {
     try {
+        console.log('Fetching all music...');
         const music = await Music.find({});
+        console.log('Fetched music:', music);
         res.status(200).json(music);
-
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({message: error.message})
+        console.log('Error fetching music:', error.message);
+        res.status(500).json({ message: error.message });
     }
-})
+});
+
 
 app.get('/music/:id', async(req, res) => {
     try {
