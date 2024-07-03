@@ -6,7 +6,7 @@ const cors = require('cors')
 
 
 mongoose.connect('mongodb+srv://admin:3169@aprajitaapi.7ia9tya.mongodb.net/Node-API??retryWrites=true&w=majority&appName=AprajitaAPI').then(() => {
-    console.log('Connected to MongoDB')
+    console.log('cConnected to MongoDB')
 }).catch((error) => {
     console.log(error)
 })
