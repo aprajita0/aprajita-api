@@ -82,10 +82,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Music API</h1>
-        <p>
-          You can test the CRUD Features below, you can update, delete and add a song into the database. The song list contains all the data from the music database created in MongoDB. To test this on postman go to use the link https://mern-aprajitas-api.vercel.app/, to test the get, update and delete functions add /music to the url.
-        </p>
+        <h1>Welcome to Music API!</h1>
+    <p>
+    Below, you can test the CRUD features. You can update, delete, and add songs to the database. The song list displays all the data from the music database created in MongoDB. To test this using Postman, visit <a href="https://mern-aprajitas-api.vercel.app/" style="text-decoration: underline;" target="_blank">https://mern-aprajitas-api.vercel.app/</a>. To interact with the API for get, update, and delete functions, append <strong>/music</strong> to the URL.
+    </p>
+
         
         <h2>{editing ? 'Edit Song' : 'Add a New Song'}</h2>
         <form onSubmit={handleSubmit}>
